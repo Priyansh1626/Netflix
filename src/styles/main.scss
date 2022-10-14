@@ -1,0 +1,160 @@
+@import "mixin";
+@import "var";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+.app{
+    background-color: #111;
+}
+
+.nav-black{
+    background-color: black  !important;
+}
+
+.nav-container{
+    background: linear-gradient(360deg,transparent,rgba(37, 37, 37, 0.258) 50%,#111);
+    height: 7rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: .2rem 0;
+    @include flex_center(space-between);
+    transition: $trans2;
+
+    .nav-logo{
+        width: 9.5rem;
+        object-fit: contain;
+        margin-left: 1rem;
+    }
+
+    .smile-icon{
+        width: 4rem;
+        object-fit: contain;
+        margin-right: 2rem;
+    }
+}
+
+.banner{
+    color: white;
+    object-fit: contain;
+    // height: 45rem;
+    padding-bottom: 12rem;
+    margin-bottom: 2rem;
+    position: relative;
+    
+    .banner-contents{
+        margin-left: 3rem;
+        padding-top: 13rem;
+
+        .banner-title{
+            font-size: 4.7rem;
+            font-weight: 800;
+            padding-bottom: .9rem;
+            text-shadow: .2rem .3rem 2rem rgb(57, 57, 57);
+        }
+
+        .banner-btns{
+
+            .banner-btn{
+                cursor: pointer;
+                color: white;
+                outline: none;
+                border: none;
+                font-weight: 700;
+                border-radius: 0.2vw;
+                padding: .9rem 3.5rem;
+                margin-right: 2rem;
+                font-size: 1.5rem;
+                background-color: rgba(51,51,51,0.5);
+                transition: $trans2;
+                font-size: 1.7rem;
+                
+                &:hover{
+                    color: rgba(51,51,51,0.5);
+                    background-color: white;
+                }
+            }
+        }
+
+        .banner-description{
+            max-width: 50rem;
+            padding: 1.5rem 2rem 1.5rem 0;
+            line-height: 1.3;
+            text-align: justify;
+            font-size: 2rem;
+        }
+    }
+
+    .banner-fade-bottom{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 13rem;
+        width: 100%;
+        background: linear-gradient(180deg,transparent,rgba(37,37,37,0.54),#111);
+    }
+}
+
+.main-row{
+    margin-left: 2rem;
+    margin-top: .7rem;
+    color: white;
+
+    .bigFont{
+        font-size:2.7rem;
+    }
+
+    h2{
+        margin: .7rem 0 .7rem .4rem;
+        font-size: 2.4rem;
+        font-family: 'Roboto Slab', serif;  
+    }
+
+    .row-posters{
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        padding: 1rem;
+    
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        .row-poster{
+            width: 100%;
+            max-height: 12rem;
+            // object-fit: contain; 
+            margin-right: .8rem;
+            transition: $trans3;
+        
+            &:hover{
+                transform: scale(1.08);
+            }
+        } 
+        
+        .row_posterLarge{
+           max-height: 25rem; 
+
+           &:hover{
+                transform: scale(1.09);
+           }
+        }
+    }
+}
+
+
+

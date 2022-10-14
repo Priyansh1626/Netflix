@@ -1,0 +1,5 @@
+@mixin flex_center($jus:center,$ali:center) {
+    display: flex;
+    justify-content: $jus;
+    align-items: $ali;
+}
